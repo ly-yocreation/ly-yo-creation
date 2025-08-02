@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ly-Yo Création - Objets en cuir</title>
+
+  <!-- Police -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'UnifrakturCook', cursive;
+      background: #2b1e14;
+      color: #f3e5ab;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      background: #3a2a1c;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      flex: 1;
+      text-align: center;
+    }
+    .menu-toggle {
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      color: #f3e5ab;
+      cursor: pointer;
+      position: absolute;
+      left: 1em;
+      top: 1.2em;
+    }
+    nav {
+      position: absolute;
+      top: 60px;
+      left: 1em;
+      background: #3a2a1c;
+      border: 1px solid #4a3725;
+      padding: 1em;
+      display: none;
+      flex-direction: column;
+    }
+    nav a {
+      color: #f3e5ab;
+      text-decoration: none;
+      margin: 0.5em 0;
+    }
+    nav.show {
+      display: flex;
+    }
+    .content {
+      padding: 2em;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 1em;
+    }
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      background: #fff8f0;
+      border-radius: 8px;
+      width: 320px;
+      overflow: hidden;
+      color: #2b1e14;
+      padding: 1em;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    .product-card h3 {
+      margin: 0.5em 0;
+    }
+    .product-card p {
+      font-family: serif;
+    }
+    .shop-links img {
+      height: 32px;
+      margin: 0 0.5em;
+    }
+    #atelier {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 2em auto;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <h1>Ly-Yo Création</h1>
+  </header>
+
+  <nav id="mobile-menu">
+    <a href="#creations">Créations</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h2 id="creations">Créations</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/prod1.png" alt="Porte-monnaie rond">
+        <h3>Porte-monnaie rond</h3>
+        <p>Élégant et pratique, ce porte-monnaie rond est réalisé à la main dans un cuir véritable de qualité supérieure.</p>
+        <div class="shop-links">
+          <a href="https://www.vinted.be/member/281809186-cdrcptt" target="_blank"><img src="images/vinted.png" alt="Vinted"></a>
+          <a href="https://www.etsy.com/fr/shop/LyYOCreation" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/prod2.png" alt="Bracelet manchette">
+        <h3>Bracelet manchette</h3>
+        <p>Bracelet en cuir épais cousu main, inspiré des forgerons et des guerriers. Un accessoire de caractère.</p>
+        <div class="shop-links">
+          <a href="https://www.vinted.be/member/281809186-cdrcptt" target="_blank"><img src="images/vinted.png" alt="Vinted"></a>
+          <a href="https://www.etsy.com/fr/shop/LyYOCreation" target="_blank"><img src="images/etsy.png" alt="Etsy"></a>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="apropos">À propos</h2>
+    <img src="images/atelier.png" id="atelier" alt="Atelier">
+    <p style="text-align: center;">
+      Je suis artisan du cuir, inspiré par l’univers des forgerons, des drakkars et des traditions ancestrales.
+      Chaque pièce est façonnée avec soin dans mon atelier, dans un esprit viking et médiéval, pour donner vie à des objets robustes, utiles et chargés d’histoire.
+    </p>
+
+    <h2 id="contact">Contact</h2>
+    <p style="text-align: center; font-size: 1.3em;">
+      <a href="mailto:contact@lyyocreation@gmail.com" style="color: #f3e5ab; text-decoration: none;">
+        <img src="images/email.png" alt="Email" style="height: 30px; vertical-align: middle; margin-right: 10px;">
+        contact@lyyocreation@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <footer>© 2025 Ly-Yo Création – Tous droits réservés</footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
